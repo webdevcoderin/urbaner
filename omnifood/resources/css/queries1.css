@@ -1,0 +1,132 @@
+
+/*big tablet to 1200px: (widths smaller then the 1140px row)*/
+@media only screen and (max-width: 1200px) {
+	.hero-text-box {
+		width: 100%;
+		padding: 0 2%;
+	}
+	.row { padding: 0 2%;
+		width: 100%;
+	}
+}
+/*small tablet to big  tables: from 768px to 1023px*/
+@media only screen and (max-width: 1023px) {
+	body {
+		font-size: 18px;
+	}
+	section {
+		padding: 60px 0;
+	}
+	.long-copy {
+	    line-height: 145%;
+	    width: 80%;
+	    margin-left: 10%;
+   }
+   .steps-box {
+		margin-top: 10px!important
+	}
+	.works-step {
+    	margin-bottom: 20px;
+	}
+	.works-step:last-of-type {
+		margin-bottom: 40px;
+	}
+	.app-screen {
+	    width: 46%;
+	}
+	.btn-app img {
+		margin-right: 5px;
+	}
+	.icon-small {
+	    font-size: 100%;
+	    width: 20px;
+	    margin-right: 5px;
+	}
+	.city-feature {
+		font-size:83%;
+	}
+	.plan-box{
+		width:100%;
+		margin-left: 0;
+		font-size: 15px;
+	}
+	.plan-price {
+	    font-size: 250%;
+	}
+	.footer-nav li, .social-links li {
+    	margin-right: 10px;
+	}
+}
+
+/*small phones to small tables: from 481px to 767px*/
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 16px;
+	}
+	section {
+		padding: 30px 0;
+	}
+	.row,hero-text-box {
+		padding: 0 4%;
+	}
+	.main-nav {
+		display: none;
+	}
+	/**Mobile navigation**/
+	.mobile-nav-icon {
+		display: inline-block;
+		margin-top: 10px;
+	}
+	.main-nav {
+		float: left;
+		margin-top: 16px;
+	}
+	.main-nav li {
+		display: block;
+	}
+	.main-nav li a:link, 
+	.main-nav li a:visited {
+		display: block;
+		border:0;
+		font-size: 100%;
+		padding: 15px 0;
+	}
+
+	.sticky .main-nav li a:link,
+	.sticky .main-nav li a:visited{ padding: 10px 0; }
+	.sticky .main-nav { margin-top: 0px; }
+	.sticky .mobile-nav-icon { margin-top: 10px; }
+	.sticky .mobile-nav-icon i { color: #555; }
+	/**mobile nav ends here **/
+	.col {
+		width:100%;
+		margin: 0 0 4% 0;
+	}
+	.long-copy {
+		width: 100%;
+		margin:0;
+	}
+	.steps-box:first-child{
+		text-align: center;
+	}
+	.app-screen {
+	    width: 30%;
+	}
+	h1 {
+		font-size: 180%;
+	}
+	h1 {
+		font-size: 150%;
+	}
+	.works-step div {
+		height: 40px;
+    	width: 40px;
+    	padding: 3px;
+	}
+}
+/*Small phones: from 0 to 480px*/
+@media only screen and (max-width: 480px) {
+	section {
+		padding: 20px 0;
+	}
+}
