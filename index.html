@@ -14,19 +14,26 @@
 	<meta name="author" content="Urbaner, LLC">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7CMontserrat:300,400%7CVarela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Fontello -->
     <link href="css/fontello.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Propeller -->
     <link href="css/propeller.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="css/animate.css" rel="stylesheet">
+
     <!-- Main CSS files -->
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/colors/blue.css" rel="stylesheet" id="color-switcher">
-    
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Propeller -->
+        <script src="js/propeller.min.js"></script>
+        <!-- Smooth Scroll -->
+        <script src="js/jquery.nav.js"></script>
 </head>
 
 <body>
@@ -41,51 +48,68 @@
         <!-- Navbar Area -->
         <nav class="navbar navbar-default navbar-fixed-top navbar-area" id="navbar-area">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#main-navbar-collapse" data-toggle="collapse" type="button">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Brand -->
-                    <a class="navbar-brand" href="#">
-                        <img src="images/Urbaner Logo smaller.png" alt="">
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="main-navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right navbar-list">
-                        <li class="hash-link">
-                            <a href="javascript:void(0);">About</a>
-                        </li>
-                        <li class="hash-link">
-                            <a href=javascript:void(0);">My Urbaner</a>
-                        </li>
-                    </ul>
+                <div class="row justify-content-center align-items-start">
+                    <div class="col-sm-6 ">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/Urbaner Logo smaller.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown text-right">
+                          <span style="cursor:pointer" onclick="openNav()"><img src="images/menuicon.png" alt="menu icon"></span>
+                            <div id="mySidenav" class="sidenav">
+                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                              <a href="#">About</a>
+                              <a href="#">My Urbaner</a>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- <header class="mobile-menu">
+        <div class="container">
+                <div class="row justify-content-center align-items-start">
+                    <div class="col-sm-6 ">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/Urbaner Logo smaller.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown text-right">
+                          <span style="cursor:pointer" onclick="openNav()"><img src="images/menuicon.png" alt="menu icon"></span>
+                            <div id="mySidenav" class="sidenav">
+                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                              <a href="#">About</a>
+                              <a href="#">My Urbaner</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header> -->
     <!-- Home Area -->
     <section class="home-area section-fixed-bg section-overlay-bg" id="home-area">
         <div class="container">
             <div class="row db-xs db-sm vertical-align">
                 <!-- Text part -->
-                <div class="col-md-12 topnav">
+                <div class="col-md-12 topnav1">
                     <div class="text-part">
                         <!-- Title -->
                         <h1 class="home-title">
                             <b>A WAY TO ENJOY THE UNPREDICTABLE.</b>
                         </h1>
                         <!-- Description -->
-                        <p class="home-description">Manage sudden encounters with style and ease. Download the app.</p>
+                        <p class="home-description">Manage sudden encounters with style and ease.</p>
+                        <p><span>Download the app.</span></p>
                         <!-- Buttons set -->
                         <div class="buttons-set">
-                            <a class="google-play" href="#">
+                            <a class="gDownload the app.oogle-play" href="default.asp">
                                 <img alt="Download on Google Play" src="images/downloads-badges/google-play.png" style="width: 152px;"> </a>
-                                <a class="google-play" href="#">
+                                <a class="google-play" href="default.asp">
                                     <img alt="Download on Google Play" src="images/downloads-badges/app-store.png" style="width: 152px;"> </a>
                         </div>
                     </div>
@@ -96,18 +120,17 @@
     </section>
 
     <!-- Horizontal rule -->
-    <hr>
-    
+
      <section class="latest-posts-area section-gray-bg hr-shadow-bottom">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="blog-posts">
+                <div class="blog-posts js--wp-1">
                     <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
+                    <div class="col-sm-6 col-md-4 padding-left-right first-product-col">
+                        <!-- <div class="pmd-card pmd-card-default pmd-z-depth-2">
                             <div class="pmd-card-media post-thumbnail">
                                 <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-04.jpg"> </a>
+                                        <img alt="Post Thumbnail" src="images/urbanerguyresized.jpg"> </a>
                             </div>
                             <div class="pmd-card-title post-text">
                                 <a href="blog-post.html" target="_blank">
@@ -118,10 +141,30 @@
                                     <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="pmd-card pmd-card-default pmd-z-depth-2 custom-background-product">
+                            <div class="product-overlay">
+                              <!--<img src="images/downloads-section.jpg" alt="Avatar" class="image" style="width:100%">-->
+                              <div class="middle">
+                                <div class="text">
+                                    <div class="pmd-card-title post-text">
+                                    <a href="blog-post.html" target="_blank">
+                                        <h2 class="pmd-card-title-text"> Our Product</h2>
+                                    </a>
+                                    <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="learn-more-product">
+                                <a class="btn pmd-btn-raised btn-custom"  href="#"><i class="icon-info"></i>Learn More</a>
+                            </div>
                         </div>
+
                     </div>
                     <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4 padding-left-right">
                         <div class="pmd-card pmd-card-default pmd-z-depth-2">
                             <div class="pmd-card-media post-thumbnail">
                                 <a href="blog-post.html" target="_blank">
@@ -131,27 +174,27 @@
                                 <a href="blog-post.html" target="_blank">
                                     <h2 class="pmd-card-title-text">Press</h2>
                                 </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, quis vehicula lectus vestibulum ut.</span>
+                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, quis vehicula vestibulum ut.</span>
                                 <div>
-                                    <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
+                                    <a href="#" style="color: #2196f3; display: grid;">Learn More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4 padding-left-right">
                         <div class="pmd-card pmd-card-default pmd-z-depth-2">
                             <div class="pmd-card-media post-thumbnail">
                                 <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-02.jpg"> </a>
+                                        <img alt="Post Thumbnail" src="images/black woman texting 4.jpg"> </a>
                             </div>
                             <div class="pmd-card-title post-text">
                                 <a href="blog-post.html" target="_blank">
                                     <h2 class="pmd-card-title-text">Our Blog</h2>
                                 </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, quis lectus vestibulum ut.</span>
                                 <div>
-                                    <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
+                                    <a href="blog.html" style="color: #2196f3; display: grid;">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -160,337 +203,25 @@
             </div>
         </div>
     </section>
-    
-    
+
+
         <!-- Team Area -->
         <section class="team-area section-white-bg" id="team-area">
-            <div class="container">
+            <div class="container-fluid phone-banner-height">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-                        <div class="section-heading">
+                    <img alt="Author Picture" src="images/phonebanner.jpg">
+                    <div class="section-heading product-tour-custom">
                             <!-- Title -->
-                            <h1 class="section-title">Product Tour</h1>
+                        <h1 class="section-title" style="font-size:35px;">Product Tour</h1>
                             <!-- Description -->
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dignissimos molestiae eius, id, architecto at?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Carousel -->
-                    <div class="col-md-3">
-                        <div class="item">
-                            <!-- Single member -->
-                            <div class="pmd-card pmd-card-default pmd-z-depth-1">
-                                <div class="pmd-card-media">
-                                    <img alt="Author Picture" src="images/phone.jpg"> </div>
-                                <div class="pmd-card-title text-left">
-                                    <h2 class="pmd-card-title-text">Lorem Ipsum is simply</h2>
-                                    <span class="pmd-card-subtitle-text">It has survived not only five</span>
-                                    <div>
-                                        <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <!-- Single member -->
-                            <div class="pmd-card pmd-card-default pmd-z-depth-1">
-                                <div class="pmd-card-media">
-                                    <img alt="Author Picture" src="images/phone.jpg"> </div>
-                                <div class="pmd-card-title text-left">
-                                    <h2 class="pmd-card-title-text">when an unknown printer</h2>
-                                    <span class="pmd-card-subtitle-text">It has survived not only five</span>
-                                    <div>
-                                      <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <!-- Single member -->
-                            <div class="pmd-card pmd-card-default pmd-z-depth-1">
-                                <div class="pmd-card-media">
-                                    <img alt="Author Picture" src="images/phone.jpg"> </div>
-                                <div class="pmd-card-title text-left">
-                                    <h2 class="pmd-card-title-text">It has survived not only</h2>
-                                    <span class="pmd-card-subtitle-text">but also the leap into elec</span>
-                                    <div>
-                                      <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <!-- Single member -->
-                            <div class="pmd-card pmd-card-default pmd-z-depth-1">
-                                <div class="pmd-card-media">
-                                    <img alt="Author Picture" src="images/phone.jpg"> </div>
-                                <div class="pmd-card-title text-left">
-                                    <h2 class="pmd-card-title-text">but also the leap into elec</h2>
-                                    <span class="pmd-card-subtitle-text">the leap into electronic typesetting</span>
-                                    <div>
-                                        <a href="#" style="color: #2196f3; text-align: right; display: grid;">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dignissimos molestiae eius, id, architecto at?</p>
+                     </div>
                 </div>
             </div>
+
         </section>
-    <!-- Latest Posts Area -->
-    <section class="latest-posts-area section-gray-bg hr-shadow-bottom" id="latest-posts-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-                    <div class="section-heading">
-                        <!-- Title -->
-                        <h1 class="section-title">Recent posts</h1>
-                        <!-- Description -->
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, numquam.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="blog-posts">
-                    <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
-                            <div class="pmd-card-media post-thumbnail">
-                                <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-04.jpg"> </a>
-                            </div>
-                            <div class="pmd-card-title post-text">
-                                <a href="blog-post.html" target="_blank">
-                                    <h2 class="pmd-card-title-text">Take a Tour of Our Office!</h2>
-                                </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-                            </div>  
-                            <div class="pmd-card-title post-meta">
-                                <div class="media-left">
-                                    <a class="avatar-list-img" href="javascript:void(0);">
-                                            <img alt="Author Picture" src="images/profile-pictures/member-02.jpg"> </a>
-                                </div>
-                                <div class="media-body media-middle">
-                                    <a href="javascript:void(0);">
-                                        <h5 class="pmd-card-title-text">Daniel Smith</h5>
-                                    </a>
-                                    <span class="pmd-card-subtitle-text icon-wrapper">15 Aug 18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
-                            <div class="pmd-card-media post-thumbnail">
-                                <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-03.jpg"> </a>
-                            </div>
-                            <div class="pmd-card-title post-text">
-                                <a href="blog-post.html" target="_blank">
-                                    <h2 class="pmd-card-title-text">10 Photography Tips for Beginners</h2>
-                                </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, quis vehicula lectus vestibulum ut.</span>
-                            </div>
-                            <div class="pmd-card-title post-meta">
-                                <div class="media-left">
-                                    <a class="avatar-list-img" href="javascript:void(0);">
-                                            <img alt="Author Picture" src="images/profile-pictures/member-05.jpg"> </a>
-                                </div>
-                                <div class="media-body media-middle">
-                                    <a href="javascript:void(0);">
-                                        <h5 class="pmd-card-title-text">Helen Pratt</h5>
-                                    </a>
-                                    <span class="pmd-card-subtitle-text icon-wrapper">8 Aug 18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
-                            <div class="pmd-card-media post-thumbnail">
-                                <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-02.jpg"> </a>
-                            </div>
-                            <div class="pmd-card-title post-text">
-                                <a href="blog-post.html" target="_blank">
-                                    <h2 class="pmd-card-title-text">5 tips for doing business in Japan</h2>
-                                </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                            </div>
-                            <div class="pmd-card-title post-meta">
-                                <div class="media-left">
-                                    <a class="avatar-list-img" href="javascript:void(0);">
-                                            <img alt="Author Picture" src="images/profile-pictures/member-03.jpg"> </a>
-                                </div>
-                                <div class="media-body media-middle">
-                                    <a href="javascript:void(0);">
-                                        <h5 class="pmd-card-title-text">Sara Miller</h5>
-                                    </a>
-                                    <span class="pmd-card-subtitle-text icon-wrapper">27 July 18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
-                            <div class="pmd-card-media post-thumbnail">
-                                <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-03.jpg"> </a>
-                            </div>
-                            <div class="pmd-card-title post-text">
-                                <a href="blog-post.html" target="_blank">
-                                    <h2 class="pmd-card-title-text">We're hiring, come and join us!</h2>
-                                </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing Ex.</span>
-                            </div>
-                            <div class="pmd-card-title post-meta">
-                                <div class="media-left">
-                                    <a class="avatar-list-img" href="javascript:void(0);">
-                                            <img alt="Author Picture" src="images/profile-pictures/member-01.jpg"> </a>
-                                </div>
-                                <div class="media-body media-middle">
-                                    <a href="javascript:void(0);">
-                                        <h5 class="pmd-card-title-text">David Tann</h5>
-                                    </a>
-                                    <span class="pmd-card-subtitle-text icon-wrapper">17 July 18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
-                            <div class="pmd-card-media post-thumbnail">
-                                <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-01.jpg"> </a>
-                            </div>
-                            <div class="pmd-card-title post-text">
-                                <a href="blog-post.html" target="_blank">
-                                    <h2 class="pmd-card-title-text">We're hiring, come and join us!</h2>
-                                </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing Ex.</span>
-                            </div>
-                            <div class="pmd-card-title post-meta">
-                                <div class="media-left">
-                                    <a class="avatar-list-img" href="javascript:void(0);">
-                                            <img alt="Author Picture" src="images/profile-pictures/member-01.jpg"> </a>
-                                </div>
-                                <div class="media-body media-middle">
-                                    <a href="javascript:void(0);">
-                                        <h5 class="pmd-card-title-text">David Tann</h5>
-                                    </a>
-                                    <span class="pmd-card-subtitle-text icon-wrapper">17 July 18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single post -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
-                            <div class="pmd-card-media post-thumbnail">
-                                <a href="blog-post.html" target="_blank">
-                                        <img alt="Post Thumbnail" src="images/blog/post-03.jpg"> </a>
-                            </div>
-                            <div class="pmd-card-title post-text">
-                                <a href="blog-post.html" target="_blank">
-                                    <h2 class="pmd-card-title-text">We're hiring, come and join us!</h2>
-                                </a>
-                                <span class="pmd-card-subtitle-text">Lorem ipsum dolor sit amet, consectetur adipisicing Ex.</span>
-                            </div>
-                            <div class="pmd-card-title post-meta">
-                                <div class="media-left">
-                                    <a class="avatar-list-img" href="javascript:void(0);">
-                                            <img alt="Author Picture" src="images/profile-pictures/member-01.jpg"> </a>
-                                </div>
-                                <div class="media-body media-middle">
-                                    <a href="javascript:void(0);">
-                                        <h5 class="pmd-card-title-text">David Tann</h5>
-                                    </a>
-                                    <span class="pmd-card-subtitle-text icon-wrapper">17 July 18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="btn-wrapper">
-                        <!-- Blog button -->
-                        <a class="btn pmd-btn-raised btn-custom" href="blog.html" target="_blank" role="button">
-                            Visit Our Blog</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="downloads-area section-fixed-bg section-overlay-bg" id="downloads-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-                    <div class="section-heading">
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <section class="about-area section-white-bg" id="about-area">
-        <div class="container">
-            <div class="row db-xs db-sm vertical-align">
-                <!-- Text part -->
-                <div class="col-md-7 pull-right">
-                    <div class="text-part">
-                        <!-- Title -->
-                        <h2 class="about-title">Company Teaser/Achievement </h2>
-                        <!-- Description -->
-                        <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sit fugiat vitae reiciendis, suscipit debitis.
-                            <br> Mollit sunt reprehenderit officia in ut occaecat qui sit id in eiusmod duis voluptate adipisicing officia ut pariatur. </p>
-                        <!-- List -->
-                        <ul class="list-unstyled about-list">
-                            <li class="icon-wrapper">Proident dolor consequat nulla non voluptate occaecat enim quis est ex.</li>
-                            <li class="icon-wrapper">Mollit dolor officia in labore dolor consequat reprehenderit dolor sed.</li>
-                            <li class="icon-wrapper">Laborum est dolore eiusmod ut consectetur et cupidatat.</li>
-                            <li class="icon-wrapper">Exercitation culpa sunt deserunt qui ea sed sit ut adipisicing duis mollit</li>
-                            <li class="icon-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dignissimos!</li>
-                            <li class="icon-wrapper">Ullamco pariatur dolore mollit ea non dolore.</li>
-                            <li class="icon-wrapper">Id ut sit adipisicing non pariatur.</li>
-                        </ul>
-                        <!-- Button -->
-                        <a class="btn pmd-btn-raised btn-custom" data-scroll="" href="#">
-                            <i class="icon-info"></i>Learn More</a>
-                    </div>
-                </div>
-                <!-- Image part -->
-                <div class="col-md-5 pull-left">
-                    <div class="img-part">
-                        <img alt="Phone Mockup" src="images/mockups/double-phones-about.png"> </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- FAQ's Area -->
+        <!-- FAQ's Area -->
     <section class="faqs-area section-gray-bg hr-shadow" id="faqs-area">
         <div class="container">
             <div class="row">
@@ -498,16 +229,16 @@
                     <div class="section-heading">
                         <!-- Title -->
                         <h1 class="section-title">FAQ's</h1>
-                        <!-- Description -->
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae architecto ad, harum distinctio suscipit.</p>
+                        <!-- Description
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repudiandae architecto ad, harum distinctio suscipit.</p>-->
                     </div>
                 </div>
             </div>
             <div class="row db-xs vertical-align">
                 <!-- Accordion part -->
-                <div class="col-sm-7">
+                <div class="col-sm-12 ">
                     <div class="text-part">
-                        <div aria-multiselectable="true" class="panel-group pmd-accordion" id="accordion" role="tablist">
+                        <div aria-multiselectable="true" class="panel-group pmd-accordion margin-bottom-0" id="accordion" role="tablist">
                             <!-- Single FAQ -->
                             <div class="panel panel-default">
                                 <div class="panel-heading" id="headingOne" role="tab">
@@ -578,30 +309,94 @@
                                     <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam rerum commodi nostrum esse atque accusamus, repellat dignissimos dolores totam, amet eos reprehenderit deserunt saepe nobis quod magni natus ab ipsam nam? Ullam nostrum, consectetur ut magnam, cumque autem nesciunt alias.</div>
                                 </div>
                             </div>
+                            <div class="text-center">
+                                    <a class="btn pmd-btn-raised btn-custom"  href="#">Learn More</a>
+                                </div>
                         </div>
                     </div>
                 </div>
                 <!-- Image part -->
-                <div class="col-sm-5">
-                    <div class="img-part">
+                <!-- <div class="col-sm-5">
+                    <div class="img-part js--wp-faq">
                         <img alt="Phone Mockup" src="images/mockups/phone-FAQs.png"> </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!--
+    <section class="downloads-area section-fixed-bg section-overlay-bg" id="downloads-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+                    <div class="section-heading">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section class="about-area" id="about-area">
+        <div class="container">
+            <div class="row db-xs db-sm">
+                <!-- Text part -->
+                <div class="col-md-8 pull-right">
+                    <div class="text-part">
+                        <!-- Title -->
+                        <h2 class="about-title">Company Teaser/Achievement </h2>
+                        <!-- Description -->
+                        <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sit fugiat vitae reiciendis, suscipit debitis.
+                            <br> Mollit sunt reprehenderit officia in ut occaecat qui sit id in eiusmod duis voluptate adipisicing officia ut pariatur. </p>
+                        <!-- List -->
+                        <ul class="list-unstyled about-list">
+                            <li class="icon-wrapper">Proident dolor consequat nulla non voluptate occaecat enim quis est ex.</li>
+                            <li class="icon-wrapper">Mollit dolor officia in labore dolor consequat reprehenderit dolor sed.</li>
+                            <li class="icon-wrapper">Laborum est dolore eiusmod ut consectetur et cupidatat.</li>
+                            <li class="icon-wrapper">Exercitation culpa sunt deserunt qui ea sed sit ut adipisicing duis mollit</li>
+
+                        </ul>
+                        <!-- Button -->
+                        <a class="btn pmd-btn-raised btn-custom" data-scroll="" href="#">
+                            <i class="icon-info"></i>Learn More</a>
+                    </div>
+                </div>
+                <!-- Image part -->
+                <div class="col-md-4 pull-left">
+                    <div class="img-part js--wp-2">
+                        <img alt="Phone Mockup" src="images/mockups/double-phones-about.png"> </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+
     <!-- Horizontal rule -->
-    <hr>
+
     <!-- Footer Area -->
     <footer class="footer-area">
         <div class="container">
             <div class="row main-footer">
+                <div class="col-sm-4">
+                    <div class="company-overview">
+                        <span class="name" data-scroll>
+                            <img src="images/Urbanersmall.png" alt="">
+                        </span>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
                 <!-- Single list -->
-                <div class="col-sm-3">
+                <div class="col-sm-2">
+                    <h4>Company</h4>
                     <ul class="list-unstyled single-list">
-                        <li>
-                            <h4>Company</h4>
-                        </li>
                         <li>
                             <a href="#">About Us</a>
                         </li>
@@ -611,20 +406,16 @@
                     </ul>
                 </div>
                 <!-- Single list -->
-                <div class="col-sm-3">
+                <div class="col-sm-2">
+                    <h4>Use</h4>
                     <ul class="list-unstyled single-list">
                         <li>
-                            <h4>Use</h4>
+                            <a href="#">Terms & Conditions</a>
                         </li>
                         <li>
                             <a href="#">FAQ</a>
                         </li>
-                        <li>
-                            <a href="#">Terms</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms & Conditions</a>
-                        </li>
+
                         <li>
                             <a href="#">Privacy</a>
                         </li>
@@ -634,14 +425,13 @@
                         <li>
                             <a href="#">Cookies</a>
                         </li>
+
                     </ul>
                 </div>
                 <!-- Single list -->
-                <div class="col-sm-3">
+                <div class="col-sm-2">
+                    <h4>Contact</h4>
                     <ul class="list-unstyled single-list">
-                        <li>
-                            <h4>Contact</h4>
-                        </li>
                         <li>
                             <a href="#">Feed Back</a>
                         </li>
@@ -656,24 +446,48 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Company overview -->
-                <div class="col-sm-3">
-                    <div class="company-overview">
-                        <span class="name" data-scroll>
-                            <img src="images/Urbanersmall.png" alt="">
-                        </span>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
+                <div class="col-sm-2">
+                    <h4>Socials</h4>
+
+                    <ul class="list-unstyled single-list">
+                        <li>
+                            <a href="javascript:void(0);">
+                            <i class="icon-twitter"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0);">
+                            <i class="icon-facebook"></i>Facebook
+                        </li>
+                        <li>
+                              <a href="javascript:void(0);">
+                            <i class="icon-instagram"></i>Instagram
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                            <i class="icon-youtube"></i>Youtube
+                        </li>
+                         <li>
+                              <a href="javascript:void(0);">
+                             <i class="icon-gplus"></i>Google+
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                             <i class="icon-linkedin"></i>LinkedIn
+                        </li>
+                    </ul>
                 </div>
+                <!-- Company overview -->
+
             </div>
             <div class="row">
                 <!-- Copyrights -->
-                <div class="col-sm-6">
-                    <div class="copyright">
-                        <p>Urbaner LLC, All Rights Reserved. Copyright © 2021.</p>
+                <div class="col-sm-12">
+                    <div class="copyright" style="text-align:center;">
+                        <p>Urbaner LLC, All Rights Reserved. Copyright © 2022</p>
                     </div>
                 </div>
-                <!-- Social medias -->
+                <!-- Social medias
                 <div class="col-sm-6">
                     <div class="social-medias">
                         <a href="javascript:void(0);">
@@ -694,7 +508,7 @@
                         <a href="javascript:void(0);">
                             <i class="icon-linkedin"></i>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -716,7 +530,7 @@ text-align: center;
   }
 }
 .navbar-header{
-  background: #251e16;  
+  background: #251e16;
 }
 .navbar-brand >img{
     height: 39px;
@@ -728,20 +542,18 @@ text-align: center;
 }
 </style>
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Propeller -->
-    <script src="js/propeller.min.js"></script>
-    <!-- Smooth Scroll -->
-    <script src="js/jquery.nav.js"></script>
-
 
     <!-- Main JavaScript file -->
     <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+
 </body>
-
-
-<!-- Mirrored from qfautomation.com/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Dec 2021 05:37:57 GMT -->
 </html>
