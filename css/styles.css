@@ -13,6 +13,9 @@ body {
     body {
         font-size: 15px;
     }
+	.faqs-area .text-part{
+		width:100% !important;
+	}
 }
 
 ::-moz-selection {
@@ -246,7 +249,6 @@ hr {
     margin: auto;
 }
 .custom-background-product {
-    height: 544px;
     background: #060721;
 }
 .first-product-col .text-center {
@@ -256,9 +258,20 @@ hr {
     margin: auto;
     bottom: 18px;
 }
+.center-align {
+    text-align:center;
+}
 .latest-posts-area {
     padding: 20px 9px;;
 }
+.mobile-menu-col .dropdown {
+    text-align: right;
+    margin-top: 13px;
+}
+.mobile-logo {
+    display: none;
+}
+
 @media only screen and (max-width:767px),
 only screen and (min-width:768px) and (max-width:991px) {
     .section-heading .section-title {
@@ -607,7 +620,7 @@ only screen and (min-width:768px) and (max-width:991px) {
     background: transparent;
 }
 .navbar .row {
-    padding: 40px 0 20px 0;
+    padding: 20px 0 20px 0;
 }
 .navbar-brand >img {
      height: 100% !important;
@@ -693,16 +706,16 @@ only screen and (min-width:768px) and (max-width:991px) {
     margin-top: 160px;
 }
 .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #212162;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 47px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #060721;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 110px;
 }
 
 .sidenav a {
@@ -721,8 +734,8 @@ only screen and (min-width:768px) and (max-width:991px) {
 
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
-  right: 25px;
+  top: 13px;
+  right: 70px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -741,9 +754,9 @@ only screen and (min-width:768px) and (max-width:991px) {
     background-position: center;
 }
 .home-area {
-    background-image: linear-gradient(rgba(7, 4, 4, 0.0),
+    /*background-image: linear-gradient(rgba(7, 4, 4, 0.0),
      rgba(0,0,0,0.0)), url(../images/urbanerguyresized.jpg);
-    height: 80vh;
+    */
 }
 .home-area .buttons-set {
     margin-top: 30px;
@@ -756,10 +769,6 @@ only screen and (min-width:768px) and (max-width:991px) {
 }
 .home-area:before {
     background-color: rgba(0, 0, 0, .77);
-}
-
-.home-area>.container>.row {
-    margin-top: 28px;
 }
 
 .home-area .text-part {
@@ -1226,7 +1235,7 @@ only screen and (min-width:768px) and (max-width:991px) {
 
 .footer-area .single-list li a {
     font-size: 14px;
-    color: #888;
+    color: #fff;
 }
 
 .footer-area .single-list li a:hover,
@@ -1252,13 +1261,14 @@ only screen and (min-width:768px) and (max-width:991px) {
 
 .footer-area .company-overview .description {
     font-size: 14px;
-    color: #888;
+    color: #fff;
     margin-bottom: 0;
 }
 
 .footer-area .copyright p {
     font-size: 15px;
-    color: #ccc;
+    color: #fff;
+    text-align:center;
     margin-bottom: 0;
 }
 
@@ -1321,6 +1331,9 @@ only screen and (min-width:768px) and (max-width:991px) {
 .pmd-card {
     margin-bottom: 20px;
 }
+.soical-icon-mobile {
+    display:none;
+}
 @media only screen and (min-width:768px) {
     .padding-left-right {
         padding-left:3px;
@@ -1335,4 +1348,71 @@ only screen and (min-width:768px) and (max-width:991px) {
 }
 .margin-bottom-0 {
     margin-bottom:0!important;
+}
+.margin-top3 {
+    margin-top:3px;
+}
+.three-column-height{
+    height:530px!important;
+}
+.social-stack{
+		float:right;
+	}
+@media only screen and (max-width:767px){
+    .social-icon-desktop {
+        display:none;
+    }
+    .soical-icon-mobile {
+        display:block;
+    }
+	.navbar .row{
+		    padding: 20px 0 16px 0;
+	}
+	.navbar-brand{
+		height:auto;
+	}
+	
+	.main-footer .col-sm-2{
+		width: 33.333%;
+    float: left;
+    text-align: left;
+    padding-top: 20px;
+	}
+	.footer-area .copyright p{
+		text-align:center;
+	}
+	.social-stack{
+		float:unset;
+	}
+    .mobile-menu-col {
+        align-items: center;
+    }
+	.navbar-brand >img{
+		margin-top: -35px;
+	}
+    .mobile-menu-col .dropdown {
+        text-align: right;
+margin-top: 0px;
+    }
+    .mobile-logo {
+        display: block;
+    }
+    .desktop-logo {
+        display: none;
+    }
+    .sidenav {
+        right: 0;  
+        padding-top: 35px;
+        margin-top: 84px;  
+    }
+	.three-column-height{
+height:auto !important;
+}
+#navbar-area > div > div > div.col-sm-6.mobile-menu-col > div > span > img{
+	top: 4px;
+    position: relative;
+}
+.height-530{
+	height:530px !important;
+	}
 }

@@ -50,49 +50,30 @@
             <div class="container">
                 <div class="row justify-content-center align-items-start">
                     <div class="col-sm-6 ">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand desktop-logo" href="#">
                             <img src="images/Urbaner Logo smaller.png" alt="">
                         </a>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="dropdown text-right">
+                    <div class="col-sm-6 mobile-menu-col">
+                        <div class="dropdown">
                           <span style="cursor:pointer" onclick="openNav()"><img src="images/menuicon.png" alt="menu icon"></span>
                             <div id="mySidenav" class="sidenav">
                               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                               <a href="#">About</a>
                               <a href="#">My Urbaner</a>
                             </div>
-
                         </div>
-
+                        <a class="navbar-brand mobile-logo" href="#">
+                            <img src="images/Urbaner Logo smaller.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- <header class="mobile-menu">
-        <div class="container">
-                <div class="row justify-content-center align-items-start">
-                    <div class="col-sm-6 ">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/Urbaner Logo smaller.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="dropdown text-right">
-                          <span style="cursor:pointer" onclick="openNav()"><img src="images/menuicon.png" alt="menu icon"></span>
-                            <div id="mySidenav" class="sidenav">
-                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                              <a href="#">About</a>
-                              <a href="#">My Urbaner</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </header> -->
     <!-- Home Area -->
     <section class="home-area section-fixed-bg section-overlay-bg" id="home-area">
+        <img style="width:100%;height:100vh; object-fit: cover;" src="images/urbanerguyresized.jpg"/>
         <div class="container">
             <div class="row db-xs db-sm vertical-align">
                 <!-- Text part -->
@@ -121,7 +102,7 @@
 
     <!-- Horizontal rule -->
 
-     <section class="latest-posts-area section-gray-bg hr-shadow-bottom">
+     <section class="latest-posts-area section-gray-bg hr-shadow-bottom margin-top3">
         <div class="container-fluid">
             <div class="row">
                 <div class="blog-posts js--wp-1">
@@ -142,7 +123,7 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2 custom-background-product">
+                        <div class="pmd-card pmd-card-default pmd-z-depth-2 custom-background-product three-column-height height-530">
                             <div class="product-overlay">
                               <!--<img src="images/downloads-section.jpg" alt="Avatar" class="image" style="width:100%">-->
                               <div class="middle">
@@ -165,7 +146,7 @@
                     </div>
                     <!-- Single post -->
                     <div class="col-sm-6 col-md-4 padding-left-right">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
+                        <div class="pmd-card pmd-card-default pmd-z-depth-2 three-column-height">
                             <div class="pmd-card-media post-thumbnail">
                                 <a href="blog-post.html" target="_blank">
                                         <img alt="Post Thumbnail" src="images/black woman texting 4.jpg"> </a>
@@ -183,7 +164,7 @@
                     </div>
                     <!-- Single post -->
                     <div class="col-sm-6 col-md-4 padding-left-right">
-                        <div class="pmd-card pmd-card-default pmd-z-depth-2">
+                        <div class="pmd-card pmd-card-default pmd-z-depth-2 three-column-height">
                             <div class="pmd-card-media post-thumbnail">
                                 <a href="blog-post.html" target="_blank">
                                         <img alt="Post Thumbnail" src="images/black woman texting 4.jpg"> </a>
@@ -206,7 +187,7 @@
 
 
         <!-- Team Area -->
-        <section class="team-area section-white-bg" id="team-area">
+        <section class="team-area section-white-bg margin-top3" id="team-area">
             <div class="container-fluid phone-banner-height">
                 <div class="row">
                     <img alt="Author Picture" src="images/phonebanner.jpg">
@@ -310,7 +291,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                    <a class="btn pmd-btn-raised btn-custom"  href="#">Learn More</a>
+                                     <a href="#" style="color: #2196f3; display: grid;">Learn More</a>
                                 </div>
                         </div>
                     </div>
@@ -363,8 +344,7 @@
 
                         </ul>
                         <!-- Button -->
-                        <a class="btn pmd-btn-raised btn-custom" data-scroll="" href="#">
-                            <i class="icon-info"></i>Learn More</a>
+                         <a href="#" style="color: #2196f3; display: grid;">Learn More</a>
                     </div>
                 </div>
                 <!-- Image part -->
@@ -446,7 +426,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-2">
+                
+                <div class="col-sm-2 social-icon-desktop">
                     <h4>Socials</h4>
 
                     <ul class="list-unstyled single-list">
@@ -477,18 +458,18 @@
                         </li>
                     </ul>
                 </div>
+                
                 <!-- Company overview -->
 
             </div>
             <div class="row">
                 <!-- Copyrights -->
                 <div class="col-sm-12">
-                    <div class="copyright" style="text-align:center;">
-                        <p>Urbaner LLC, All Rights Reserved. Copyright © 2022</p>
+                    <div class="copyright">
+                        <p class="center-align">Urbaner LLC, All Rights Reserved. Copyright © 2022</p>
                     </div>
                 </div>
-                <!-- Social medias
-                <div class="col-sm-6">
+                <div class="col-sm-6 soical-icon-mobile" class="social-stack">
                     <div class="social-medias">
                         <a href="javascript:void(0);">
                             <i class="icon-twitter"></i>
@@ -508,7 +489,7 @@
                         <a href="javascript:void(0);">
                             <i class="icon-linkedin"></i>
                         </a>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>
